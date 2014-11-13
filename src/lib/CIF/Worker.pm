@@ -227,7 +227,7 @@ sub send {
     $msg = JSON::XS->new->decode($msg);
     
     $msg = ${$msg}[0] if(ref($msg) && ref($msg) eq 'ARRAY');
-    
+    $Logger->debug('done...');
     return $msg;
 }
 
